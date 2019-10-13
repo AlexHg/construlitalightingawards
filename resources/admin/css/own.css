@@ -1,0 +1,111 @@
+#my-dropzone span{
+    font-size:14px!important;
+}
+
+.nav-horizontal.text-center li.active a{
+    background-color:#FFD300!important;
+}
+.nav-horizontal.text-center li a{
+    color:black;
+    text-transform: uppercase;
+}
+.nav-horizontal.text-center li:hover a{
+    background-color: rgba(255,211,0,.5);
+}
+.nav-horizontal.text-center li.active a i.gi{
+    color:white;
+    opacity:1;
+}
+.content-header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.welcome-text{
+    margin: 20px 0;
+}
+.welcome-text p{
+    margin-bottom:0!important;
+}
+
+.action-component{
+    display:none !important;
+}
+.action-component.active{
+    display:block !important;
+}
+.action-component{
+    padding-top:2.2rem;
+}
+#npcategoria, #npcategoria>div{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#npcategoria>div{
+    justify-content: space-between;
+}
+#npcategoria>div{
+    text-align:center;
+}
+#npcategoria img{
+    width: 130px;
+    filter:grayscale(1); 
+}
+#npcategoria input{
+    display: none;
+}
+#npcategoria input:disabled ~ img{
+    cursor:not-allowed;
+}
+#npcategoria input:checked ~ img{
+    filter:grayscale(0); 
+}
+.selector-step{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom:1rem;
+    margin-bottom:2rem;
+}
+.selector-step label{
+    padding: 1.8rem;
+    cursor:pointer;
+    text-align: center;
+    width: 30%;
+    border-radius: 1rem;
+    color: #F6A803;
+    font-size:1.5rem;
+}
+.selector-step label.active{
+    background:#F6A803;
+    color:white;
+}
+#npcategoria label{
+    text-decoration:none;
+    font-weight: 400;
+    margin: 1rem;
+    width: 160px;
+    cursor:pointer;
+}
+#npcategoria h4{
+    color:#333333;
+    font-weight: 300;
+    font-size:1.2rem;
+}
+#npcategoria h4 span{
+    font-weight: 400;
+    color:#F6A803;
+    font-size:1.8rem;
+}
+.cat-step{
+    display:none;   
+}
+.cat-step.active{
+    display:block;
+}
+.widget-icon.themed-background-default{
+    background-color:transparent!important;
+    background-size: contain!important;
+}
