@@ -29,8 +29,8 @@
 			$data['author'] = '';
 			$data['description'] = '';
 			$data['keyword'] = '';
-			$data['collections']= $categories;
-			$data['instance']= $instance;
+			$data['collections']= isset($categories) ? $categories : "";
+			$data['instance']= isset($instance) ? $instance : "";
 
 			Flight::render('site2019/home', $data,'body_content'); 
 			Flight::render('layout/base');
@@ -44,8 +44,8 @@
 			$data['author'] = '';
 			$data['description'] = '';
 			$data['keyword'] = '';
-			$data['collections']= $categories;
-			$data['instance']= $instance;
+			$data['collections']= isset($categories) ? $categories : "";
+			$data['instance']= isset($instance) ? $instance : "";
 
 			Flight::render('site2019/7marzohome', $data,'body_content'); 
 			Flight::render('layout/base');
@@ -59,8 +59,8 @@
 			$data['author'] = '';
 			$data['description'] = '';
 			$data['keyword'] = '';
-			$data['collections']= $categories;
-			$data['instance']= $instance;
+			$data['collections']= isset($categories) ? $categories : "";
+			$data['instance']= isset($instance) ? $instance : "";
 
 			Flight::render('site2019/homeBAK', $data,'body_content'); 
 			Flight::render('layout/base');
@@ -74,8 +74,8 @@
 			$data['author'] = '';
 			$data['description'] = '';
 			$data['keyword'] = '';
-			$data['collections']= $categories;
-			$data['instance']= $instance;
+			$data['collections']= isset($categories) ? $categories : "";
+			$data['instance']= isset($instance) ? $instance : "";
 
 			Flight::render('site2019/otras-ediciones', $data,'body_content'); 
 			Flight::render('layout/base');
@@ -87,8 +87,8 @@
 			$data['author'] = '';
 			$data['description'] = '';
 			$data['keyword'] = '';
-			$data['collections']= $categories;
-			$data['instance']= $instance;
+			$data['collections']= isset($categories) ? $categories : "";
+			$data['instance']= isset($instance) ? $instance : "";
 
 			Flight::render('site2019/faqs', $data,'body_content'); 
 			Flight::render('layout/base');
@@ -100,8 +100,8 @@
 			$data['author'] = '';
 			$data['description'] = '';
 			$data['keyword'] = '';
-			$data['collections']= $categories;
-			$data['instance']= $instance;
+			$data['collections']= isset($categories) ? $categories : "";
+			$data['instance']= isset($instance) ? $instance : "";
 
 			Flight::render('site2019/jurado', $data,'body_content'); 
 			Flight::render('layout/base');
@@ -113,8 +113,8 @@
 			$data['author'] = '';
 			$data['description'] = '';
 			$data['keyword'] = '';
-			$data['collections']= $categories;
-			$data['instance']= $instance;
+			$data['collections']= isset($categories) ? $categories : "";
+			$data['instance']= isset($instance) ? $instance : "";
 
 			Flight::render('site2019/liberacion-de-materiales', $data,'body_content'); 
 			Flight::render('layout/base');
@@ -126,8 +126,8 @@
 			$data['author'] = '';
 			$data['description'] = '';
 			$data['keyword'] = '';
-			$data['collections']= $categories;
-			$data['instance']= $instance;
+			$data['collections']= isset($categories) ? $categories : "";
+			$data['instance']= isset($instance) ? $instance : "";
 
 			Flight::render('site2019/proyecto-1', $data,'body_content'); 
 			Flight::render('layout/base');
@@ -139,8 +139,8 @@
 			$data['author'] = '';
 			$data['description'] = '';
 			$data['keyword'] = '';
-			$data['collections']= $categories;
-			$data['instance']= $instance;
+			$data['collections']= isset($categories) ? $categories : "";
+			$data['instance']= isset($instance) ? $instance : "";
 
 			Flight::render('site2019/proyectos-participantes', $data,'body_content'); 
 			Flight::render('layout/base');
@@ -152,8 +152,8 @@
 			$data['author'] = '';
 			$data['description'] = '';
 			$data['keyword'] = '';
-			$data['collections']= $categories;
-			$data['instance']= $instance;
+			$data['collections']= isset($categories) ? $categories : "";
+			$data['instance']= isset($instance) ? $instance : "";
 
 			Flight::render('site2019/proyectos-participantes/'.$proyecto/*, $data,'body_content'*/); 
 			//Flight::render('layout/base');
@@ -165,8 +165,8 @@
 			$data['author'] = '';
 			$data['description'] = '';
 			$data['keyword'] = '';
-			$data['collections']= $categories;
-			$data['instance']= $instance;
+			$data['collections']= isset($categories) ? $categories : "";
+			$data['instance']= isset($instance) ? $instance : "";
 
 			Flight::render('site2019/reconocimientos', $data,'body_content'); 
 			Flight::render('layout/base');
@@ -178,8 +178,8 @@
 			$data['author'] = '';
 			$data['description'] = '';
 			$data['keyword'] = '';
-			$data['collections']= $categories;
-			$data['instance']= $instance;
+			$data['collections']= isset($categories) ? $categories : "";
+			$data['instance']= isset($instance) ? $instance : "";
 
 			Flight::render('site2019/convocatoria', $data,'body_content'); 
 			Flight::render('layout/base');
@@ -191,8 +191,8 @@
 			$data['author'] = '';
 			$data['description'] = '';
 			$data['keyword'] = '';
-			$data['collections']= $categories;
-			$data['instance']= $instance;
+			$data['collections']= isset($categories) ? $categories : "";
+			$data['instance']= isset($instance) ? $instance : "";
 
 			Flight::render('site2019/reglamento', $data,'body_content'); 
 			Flight::render('layout/base');
@@ -206,8 +206,8 @@
 		$data['author'] = '';
 		$data['description'] = '';
 		$data['keyword'] = '';
-		$data['collections']= $categories;
-		$data['instance']= $instance;
+		$data['collections']= isset($categories) ? $categories : "";
+		$data['instance']= isset($instance) ? $instance : "";
 
 		Flight::render('site2019/registro', $data,'body_content'); 
 		Flight::render('layout/base');
@@ -2340,8 +2340,8 @@
 	 	$data['author'] = '';
 	 	$data['description'] = '';
 	 	$data['keyword'] = '';
-	 	$data['collections']= $categories;
-	 	$data['instance']= $instance;
+	 	$data['collections']= isset($categories) ? $categories : "";
+		$data['instance']= isset($instance) ? $instance : "";
 	 	Flight::render('registro2', $data,'body_content');
 	 	Flight::render('layout/base');
 	});
@@ -2459,8 +2459,8 @@
 			$data['author'] = '';
 			$data['description'] = '';
 			$data['keyword'] = '';
-			$data['collections']= $categories;
-			$data['instance']= $instance;
+			$data['collections']= isset($categories) ? $categories : "";
+			$data['instance']= isset($instance) ? $instance : "";
 			Flight::render('categorias-realizados.php', $data,'body_content');
 			Flight::render('layout/base');
 
@@ -2473,8 +2473,8 @@
 			$data['author'] = '';
 			$data['description'] = '';
 			$data['keyword'] = '';
-			$data['collections']= $categories;
-			$data['instance']= $instance;
+			$data['collections']= isset($categories) ? $categories : "";
+			$data['instance']= isset($instance) ? $instance : "";
 			Flight::render('categorias-concepto.php', $data,'body_content');
 			Flight::render('layout/base');
 
@@ -2500,8 +2500,8 @@
 			$data['author'] = '';
 			$data['description'] = '';
 			$data['keyword'] = '';
-			$data['collections']= $categories;
-			$data['instance']= $instance;
+			$data['collections']= isset($categories) ? $categories : "";
+			$data['instance']= isset($instance) ? $instance : "";
 			Flight::render('reconocimientos.php', $data,'body_content');
 			Flight::render('layout/base');
 			
@@ -2514,8 +2514,8 @@
 			$data['author'] = '';
 			$data['description'] = '';
 			$data['keyword'] = '';
-			$data['collections']= $categories;
-			$data['instance']= $instance;
+			$data['collections']= isset($categories) ? $categories : "";
+			$data['instance']= isset($instance) ? $instance : "";
 			Flight::render('faqs', $data,'body_content');
 			Flight::render('layout/base');
 
@@ -2529,8 +2529,8 @@
 			$data['author'] = '';
 			$data['description'] = '';
 			$data['keyword'] = '';
-			$data['collections']= $categories;
-			$data['instance']= $instance;
+			$data['collections']= isset($categories) ? $categories : "";
+			$data['instance']= isset($instance) ? $instance : "";
 			Flight::render('terminosycondiciones', $data,'body_content');
 			Flight::render('layout/base');
 
@@ -2543,8 +2543,8 @@
 			$data['author'] = '';
 			$data['description'] = '';
 			$data['keyword'] = '';
-			$data['collections']= $categories;
-			$data['instance']= $instance;
+			$data['collections']= isset($categories) ? $categories : "";
+			$data['instance']= isset($instance) ? $instance : "";
 			Flight::render('aviso-de-privacidad', $data,'body_content');
 			Flight::render('layout/base');
 
