@@ -9,3 +9,5 @@ index.php
 functions/Database.php
 
 views/layout/admin-base.php
+
+error_log
