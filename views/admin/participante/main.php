@@ -57,10 +57,12 @@
         foreach($projects as $key => $project){ 
             $galery = new User();	
             $images = $galery->getImages($project["id_project"]);
+            /*echo " ".($images[0]['url']);
+            exit();*/
             if( $project["status"] == 0 && $counter_pendientes < $limit_pendientes ){ 	
         ?>
             <tr>
-                <td style="width:73px;"><img src="<?php echo $images[0]['url']; ?>" class="media-object" style="width:73px;"></td>
+                <td style="width:73px;"><img src="<?php if(isset($images[0])) echo $images[0]['url']; ?>" class="media-object" style="width:73px;"></td>
                 <td style="width: 100px;"><strong><?php echo $project["id_project"];  ?></strong></td>
                 <td class="hidden-xs" style="width: 25%;"><?php echo $project["name"];  ?></td>
                 <td class="hidden-xs" style="width: 25%;"><?php category_name($project["category"]); ?></td>

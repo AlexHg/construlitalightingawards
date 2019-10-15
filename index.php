@@ -19,7 +19,7 @@
 	Flight::set('flight.views.path', 'views');
 
 	//$host = "http://localhost/CLA18/";
-	$host = "https://www.construlitalighting.com/cla/";
+	$host = "http://localhost/cla/";
 
 	#PAGINA 2019 
 		// Home	

@@ -122,6 +122,7 @@ class User extends Database
 						}else{
 							if(password_verify($password, $user["password"])){
 								
+								
 								$_SESSION['login'] = 'active';
 								$_SESSION['name'] = $user['name'];
 								$_SESSION['lastname'] = $user['lastname'];
@@ -142,14 +143,15 @@ class User extends Database
 									header('Location: dashboard');
 									
 								}else{
-									 header('Location: participante');
+									echo "participante no redir ".$user['rol'];
+									header("Location: participante");exit();
 									
 									#header('Location: upload-project-confirm');
 								}
 
 							}else{
 								$_SESSION['alerta'] = ["status"=>"Error! ","message"=>"Contraseña incorrecta intenta nuevamente."];
-								header('Location: sesion');
+								header('Location: sesion/');
 							}
 						}
 						
@@ -196,7 +198,7 @@ class User extends Database
 							header('Location: sesion');	
 						}else{
 							if(password_verify($password, $user["password"])){
-								
+								//echo "on verify".$user['rol'];
 								$_SESSION['login'] = 'active';
 								$_SESSION['name'] = $user['name'];
 								$_SESSION['lastname'] = $user['lastname'];
@@ -2288,8 +2290,9 @@ class User extends Database
 
 				$conn = parent::admin();
 				$stmt = $conn->prepare($query);
+				//echo "si";
 
-				$pr = trim($proyectosRealizados);
+				//$pr = trim($proyectosRealizados);
 
 				$stmt->bindParam(':id_project',$id,PDO::PARAM_INT);
 
