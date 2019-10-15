@@ -1,5 +1,5 @@
-tmp/*
-public/*
-.gitignore
-index.php
-views/site2019/*
+/tmp/*
+/public/*
+/.gitignore
+/index.php
+/views/site2019/*
