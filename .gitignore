@@ -1,7 +1,7 @@
 tmp/*
 public/*
 .gitignore
-views/site2019
+views/site2019/*
 index.php
 
 .htaccess
@@ -11,3 +11,5 @@ functions/Database.php
 views/layout/admin-base.php
 
 error_log
+
+views/site2019/
