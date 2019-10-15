@@ -1,7 +1,7 @@
 <ol class="breadcrumb">
     <li><a href="participante"><i class="fa fa-home"></i></a></li>
     <li><?php echo $title2 ?></li>
-    <?php echo ini_get('post_max_size'); ?>
+    <?php #echo ini_get('post_max_size'); ?>
 </ol>
 
 <div class="block action-component active" id="nuevo">
@@ -291,7 +291,7 @@
                                         <h4>ESPACIOS<br>
                                         <span>DE VIVIENDA</span></h4>
                                         <input type="radio" name="prorealizados" value="1"
-                                            <?php echo $projects['category']==1?'checked ':''; ?>
+                                            <?php if(isset($projects['category'])) echo $projects['category']==1?'checked ':''; ?>
                                             data-title="Espacios de vivienda" 
                                             data-info="Buscamos proyectos en los que la iluminación mejore la habilidad de cualquier espacio residencial. También se incluyen fraccionamientos y conjuntos habitacionales.">
                                         <img src="resources/admin/img/cla/categoria/espacios-de-vivienda.png" alt="">
@@ -300,7 +300,7 @@
                                         <h4>ESPACIOS<br>
                                         <span>COMERCIALES</span></h4>
                                         <input type="radio" name="prorealizados" value="2"
-                                            <?php echo $projects['category']==2?'checked ':''; ?>
+                                            <?php if(isset($projects['category'])) echo $projects['category']==2?'checked ':''; ?>
                                             data-title="Espacios comerciales" 
                                             data-info="Buscamos proyectos que potencien la finalidad comercial del espacio y mejoren la exhibición de productos. Esta categoría incluye tiendas minoristas y mayoristas como: tiendas especializadas, departamentales, de autoservicio, agencias vehiculares, fashion malls y otros complejos comerciales.">
                                         <img src="resources/admin/img/cla/categoria/espacios-comerciales.png" alt="">
@@ -309,7 +309,7 @@
                                         <h4>ESPACIOS<br>
                                         <span>DE HOSPITALIDAD</span></h4>
                                         <input type="radio" name="prorealizados" value="6"
-                                            <?php echo $projects['category']==6?'checked ':''; ?>
+                                            <?php if(isset($projects['category'])) echo $projects['category']==6?'checked ':''; ?>
                                             data-title="Espacios de hospitalidad" 
                                             data-info="Buscamos proyectos cuya iluminación genere atmósferas y ambientes confortables en espacios como: centros turísticos y culturales, museos, centros de convenciones y espectáculos, hoteles, restaurantes, cafeterías, teatros, cines, foros y arenas.">
                                         <img src="resources/admin/img/cla/categoria/espacios-de-hospitalidad.png" alt="">
@@ -318,7 +318,7 @@
                                         <h4>ESPACIOS<br>
                                         <span >DE TRABAJO</span></h4>
                                         <input type="radio" name="prorealizados" value="3"
-                                            <?php echo $projects['category']==3?'checked ':''; ?>
+                                            <?php if(isset($projects['category'])) echo $projects['category']==3?'checked ':''; ?>
                                             data-title="Espacios de trabajo" 
                                             data-info="Buscamos proyectos en los que la iluminación facilite el desarrollo de actividades orientadas al servicio y la productividad. Esta categoría incluye: oficinas, centros de salud, hospitales, bodegas y naves industriales, plantas manufactureras, parques industriales, planteles educativos, edificios públicos y sucursales bancarias.">
                                         <img src="resources/admin/img/cla/categoria/espacios-de-trabajo.png" alt="">
@@ -327,7 +327,7 @@
                                         <h4>ESPACIOS<br>
                                         <span >PÚBLICOS</span></h4>
                                         <input type="radio" name="prorealizados" value="4"
-                                            <?php echo $projects['category']==4?'checked ':''; ?>
+                                            <?php if(isset($projects['category'])) echo $projects['category']==4?'checked ':''; ?>
                                             data-title="Espacios públicos" 
                                             data-info="Buscamos espacios exteriores cuya iluminación cubra una necesidad funcional específica, facilite la movilidad en cualquier escala o realce los atributos arquitectónicos y patrimoniales del espacio, inmueble o monumento que ilumina. Esta categoría incluye proyectos de alumbrado público, iluminación de puentes, túneles, estructuras, monumentos y fachadas, así como plazas y jardines públicos.">
                                         <img src="resources/admin/img/cla/categoria/espacios-publicos.png" alt="">
@@ -336,7 +336,7 @@
                                         <h4>INSTALACIÓN<br>
                                         <span>ARTÍSTICA</span></h4>
                                         <input type="radio" name="prorealizados" value="5"
-                                            <?php echo $projects['category']==5?'checked ':''; ?>
+                                            <?php if(isset($projects['category'])) echo $projects['category']==5?'checked ':''; ?>
                                             data-title="Instalacion artística" 
                                             data-info="Buscamos piezas de iluminación que hayan sido exhibidas durante un periodo acotado de tiempo o formen parte de una colección específica. En esta categoría también se incluyen proyectos de iluminación escénica, iluminación de eventos e intervenciones lumínicas temporales.">
                                         <img src="resources/admin/img/cla/categoria/instalacion-artistica.png" alt="">
@@ -375,7 +375,7 @@
                                 <label for="namep">Nombre del proyecto <span class="label label-danger"></span></label>
                                 <input type="text" name="namep" id="namep" class="form-control input-reg" 
                                     placeholder="Escriba el nombre del proyecto" required
-                                    value="<?php echo $projects['name']; ?>"> 
+                                    value="<?php echo isset($projects['name']) ?: $projects['name'] = ""; ?>"> 
                                 
                             </div>
                             <div class="form-group col-md-4"> <!-- FALTA IMP -->
@@ -383,7 +383,7 @@
                                 <input type="text" name="pais" id="pais" required
                                     class="form-control input-reg" 
                                     placeholder="Escriba el país donde se realizó"
-                                    value="<?php echo $projects['pais']; ?>">
+                                    value="<?php echo isset($projects['pais']) ?: $projects['pais'] = ""; ?>">
                                 
                             </div>
                             <div class="form-group col-md-4"> <!-- FALTA IMP -->
@@ -391,36 +391,38 @@
                                 <input type="text" name="ciudad" id="ciudad" required
                                     class="form-control input-reg" 
                                     placeholder="Escriba la ciudad donde se realizó"
-                                    value="<?php echo $projects['ciudad']; ?>">
+                                    value="<?php echo isset($projects['ciudad']) ?: $projects['ciudad'] = ""; ?>">
                             </div>
                             <div class="form-group col-md-4"> <!-- FALTA IMP -->
                                 <label for="finalobra">Fecha de finalización <span class="label label-danger"></span></label>
                                 <input class="form-control input-reg" 
                                     placeholder="Escriba la fecha en la que terminó el proyecto"
                                     type="date" name="finalobra" id="finalobra" 
-                                    value="<?php echo $projects['end']; ?>" required>
+                                    value="<?php echo isset($projects['end']) ?: $projects['end'] = ""; ?>" required>
                             </div>
                             <div class="form-group col-md-4"> <!-- FALTA IMP -->
                                 <label for="disil">Diseño de iluminación por <span class="label label-danger"></span></label>
                                 <input class="form-control input-reg" placeholder="Escriba el nombre"
                                     type="text" name="disil" id="disil" required 
-                                    value="<?php echo $projects['disenador']; ?>">
+                                    value="<?php echo isset($projects['disenador']) ?: $projects['disenador'] = ""; ?>">
                             </div>
                             <div class="form-group col-md-4"> <!-- FALTA IMP -->
                                 <label for="colab">Colaboradores (opcional)</label>
                                 <input class="form-control input-reg" placeholder="Escriba los nombres"
                                     type="text" name="colab" id="colab"
-                                    value="<?php echo $projects['colaboradores']; ?>">
+                                    value="<?php echo isset($projects['colaboradores']) ?: $projects['colaboradores'] = ""; ?>">
                             </div>
                             <div class="form-group col-md-4"> <!-- FALTA IMP -->
                                 <label for="arqui">Arquitectura por <span class="label label-danger"></span></label>
                                 <input class="form-control input-reg" placeholder="Escriba el nombre"
                                     type="text" name="arqui" id="arqui" required
-                                    value="<?php echo $projects['arquitecto']; ?>">
+                                    value="<?php echo isset($projects['arquitecto']) ?: $projects['arquitecto'] = ""; ?>">
                             </div>
                             <div class="form-group col-md-12">
                                 <label for="desc_proyecto">Descripción del proyecto <span class="label label-danger"></span></label>
-                                <textarea name="desc_proyecto" id="desc_proyecto" required rows="10" maxlength="700" class="form-control input-reg count-word" placeholder="Máximo 700 caracteres" style="resize: none;" ><?php echo $projects['descripcion']; ?></textarea>
+                                <textarea name="desc_proyecto" id="desc_proyecto" required rows="10" maxlength="700" class="form-control input-reg count-word" placeholder="Máximo 700 caracteres" style="resize: none;" >
+                                    <?php echo isset($projects['descripcion']) ?: $projects['descripcion'] = "";  ?>
+                                </textarea>
                                 <!--<span class="contador"></span>-->
                                 
                             </div>
@@ -447,31 +449,31 @@
                         <div class="row">
                             <div class=" form-group col-sm-4 ">
                                 <label class="v-middle">Créditos de las fotografías (opcional)</label>
-                                <input type="text" name="fotografo" value="<?php echo $projects['fotografo']; ?>" class="form-control input-reg">
+                                <input type="text" name="fotografo" value="<?php echo isset($projects['fotografo']) ?: $projects['fotografo'] = "";  ?>" class="form-control input-reg">
                             </div>
                             <div class=" form-group col-sm-4">
                                 <label class="v-middle">Video URL</label>
-                                <input type="url" name="video" value="<?php echo $projects['video']; ?>" class="form-control input-reg">
+                                <input type="url" name="video" value="<?php echo isset($projects['video']) ?: $projects['video'] = "";  ?>" class="form-control input-reg">
                             </div>
                             <div class=" form-group col-sm-4 ">
                                 <label class="v-middle">Créditos del video (opcional)</label>
-                                <input type="text" name="creditosvid" value="<?php echo $projects['cred_video']; ?>" class="form-control input-reg">
+                                <input type="text" name="creditosvid" value="<?php echo isset($projects['cred_video']) ?: $projects['cred_video'] = ""; ?>" class="form-control input-reg">
                             </div><br>
                             <div class=" form-group col-sm-12 pdf ">
                                 <label  class="v-middle">Adjuntar el brief del proyecto en PDF. (Peso máximo 4 MB)<span class="label label-danger"></span></label><br>
                                 <p>El brief es una descripción de tu proyecto (máximo 1 cuartilla), en donde expliques a detalle aspectos como el concepto y objetivo funcional, la selección y aplicación de luminarios así como la solución estética y la innovación que representa tu propuesta. Para más detalles <a href="/cla/resources/page/images/descargables/ConstrulitaLightingAwards2019_Lineamientos.pdf" target="_blank" class="amarillo font-bold" style="font-weight: 600">consulta los lineamientos y recomendaciones.</a><span class="label label-danger"></span></p>
                                 <input type="file" name="pdf" id="pdf" class="form-control" >
-                                <input type="hidden" id="pdfRef" required value="<?php echo $projects['pdf']; ?>">
+                                <input type="hidden" id="pdfRef" required value="<?php echo isset($projects['pdf']) ?: $projects['pdf'] = ""; ?>">
                                 <div id="pdfUpl">
                                     <?php
                                         if( $projects['pdf']!= "" && $projects['pdf']!= NULL ) { 
                                     ?>
                                         <br>
-                                        <a href="public/pdf/<?php echo $projects['pdf'] ?>" class="see" target="_blank" style="display:block;max-width:100px;overflow-x:hidden;">
+                                        <a href="public/pdf/<?php echo isset($projects['pdf']) ?: $projects['pdf'] = ""; ?>" class="see" target="_blank" style="display:block;max-width:100px;overflow-x:hidden;">
                                             <img src="https://png.icons8.com/color/1600/pdf-2.png" style="max-width:100px;"><br>
-                                            <small style="display:block;white-space: nowrap;"><?php echo $projects['pdf']; ?></small>
+                                            <small style="display:block;white-space: nowrap;"><?php echo isset($projects['pdf']) ?: $projects['pdf'] = ""; ?></small>
                                         </a>
-                                        <br><a class="delete-pdf" style="cursor:pointer;text-decoration:underline;" data-name="<?php echo $projects['pdf'] ?>">Eliminar pdf</a>
+                                        <br><a class="delete-pdf" style="cursor:pointer;text-decoration:underline;" data-name="<?php echo isset($projects['pdf']) ?: $projects['pdf'] = ""; ?>">Eliminar pdf</a>
                                         
                                     <?php
                                     }  

@@ -62,7 +62,7 @@
             if( $project["status"] == 0 ){ 	
         ?>
             <tr>
-                <td style="width:73px;"><img src="<?php echo $images[0]['url']; ?>" class="media-object" style="width:73px;"></td>
+                <td style="width:73px;"><img src="<?php echo isset($images[0]['url']) ?: $images[0]['url'] = ""; ?>" class="media-object" style="width:73px;"></td>
                 <td style="width: 100px;"><strong><?php echo $project["id_project"];  ?></strong></td>
                 <td class="hidden-xs" style="width: 25%;"><?php echo $project["name"];  ?></td>
                 <td class="hidden-xs" style="width: 25%;"><?php category_name($project["category"]); ?></td>
