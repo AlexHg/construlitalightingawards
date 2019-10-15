@@ -1,7 +1,7 @@
 tmp/*
 public/*
 .gitignore
-views/site2019/*
+views/site2019
 index.php
 
 .htaccess
